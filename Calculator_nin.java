@@ -3,32 +3,47 @@ import java.util.Scanner;
 public class Calculator_nin {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the first number");
-        Double x = scanner.nextDouble();
-        System.out.println("Enter the second number");
-        Double y = scanner.nextDouble();
-        System.out.println("Enter your equation (+ - * /)");
-        String equ = scanner.next();
+        double[] num = new double[10];
+        int counter = 0;
+        while (counter < 10) {
+            System.out.println("Enter the first number");
+            double x = scanner.nextDouble();
+            System.out.println("Enter the second number");
+            double y = scanner.nextDouble();
+            System.out.println("Enter your equation (+ - * /)");
+            String equ = scanner.next();
 
-        if (equ.equals("-")) {
-            System.out.println("The answer is:" + (x - y));
+            if (equ.equals("-")) {
+                System.out.println("The answer is:" + (x - y));
+                num[counter] = x - y;
+            }
+
+            else if (equ.equals("+")) {
+
+                System.out.println("The answer is:" + (x + y));
+                num[counter] = x + y;
+            }
+
+            else if (equ.equals("/")) {
+
+                System.out.println("The answer is:" + (x / y));
+                num[counter] = x / y;
+            }
+
+            else if (equ.equals("*")) {
+
+                System.out.println("The answer is:" + (x * y));
+                num[counter] = x * y;
+            }
+
+            else if (equ.equals("q")) {
+                break;
+            }
+            counter++;
         }
-
-        if (equ.equals("+")) {
-            
-        System.out.println("The answer is:" + (x + y));
+        for (Double num2 : num) {
+            System.out.println(num2);
         }
-
-        if (equ.equals("/")) {
-            
-        System.out.println("The answer is:" + (x / y));
-        }
-
-        if (equ.equals("*")) {
-            
-        System.out.println("The answer is:" + (x * y));
-        }
-
     }
 
 }
