@@ -8,12 +8,6 @@ public class Functions {
         return x - y;
     }
 
-    public static void main(String args) {
-
-        double x = add(5, 7);
-        System.out.println(x);
-    }
-
     public static void main(string args) {
         double x = add(5, 7);
         double y = subtract(5, 7);
