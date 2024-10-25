@@ -1,6 +1,23 @@
 import java.util.Scanner;
 
 public class Calculator_nin {
+
+    public static double add(double x, double y) {
+        return x + y;
+    }
+
+    public static double subtract(double x, double y) {
+        return x - y;
+    }
+
+    public static double multiply(double x, double y) {
+        return x * y;
+    }
+
+    public static double divide(double x, double y) {
+        return x / y;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double[] num = new double[10];
@@ -14,26 +31,26 @@ public class Calculator_nin {
             String equ = scanner.next();
 
             if (equ.equals("-")) {
-                System.out.println("The answer is:" + (x - y));
-                num[counter] = x - y;
+                num[counter] = subtract(x, y);
+                System.out.println("The answer is:" + num[counter]);
             }
 
             else if (equ.equals("+")) {
 
-                System.out.println("The answer is:" + (x + y));
-                num[counter] = x + y;
+                num[counter] = add(x, y);
+                System.out.println("The answer is:" + num[counter]);
             }
 
             else if (equ.equals("/")) {
 
-                System.out.println("The answer is:" + (x / y));
-                num[counter] = x / y;
+                num[counter] = divide(x, y);
+                System.out.println("The answer is:" + num[counter]);
             }
 
             else if (equ.equals("*")) {
 
-                System.out.println("The answer is:" + (x * y));
-                num[counter] = x * y;
+                num[counter] = multiply(x, y);
+                System.out.println("The answer is:" + num[counter]);
             }
 
             else if (equ.equals("q")) {
