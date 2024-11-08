@@ -8,6 +8,7 @@ public class Vehicle {
     double fuelEconomy;
     int numPassangers;
     int passengerCapacity;
+    double milesTraveled = 0;
 
     public Vehicle(String type, String powerType, int numWheels, int numDoors, String color, double fuelEconomy,
             int passangerCapacity) {
@@ -45,8 +46,12 @@ public class Vehicle {
             System.out.println("There is not enough fuel");
         }
         fuelRemaining -= fuelUsed;
+        // Update milage counter
+        milesTraveled += miles;
         return fuelRemaining;
     }
+
+    // Refuel
 
     public static void main(String[] args) {
         Vehicle prius = new Vehicle("Car", "gas", 4, 4, "red", 15, 5);
